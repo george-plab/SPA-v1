@@ -1,0 +1,5 @@
+{
+  "name": "Cocina Mediterránea AI",
+  "description": "Una aplicación de recetas de dieta mediterránea generadas por IA con búsqueda y filtrado.",
+  "requestFramePermissions": []
+}
