@@ -9,7 +9,7 @@ declare global {
 interface AdSenseBannerProps {
   className?: string;
   slotId?: string; // Optional: If you want to pass specific ad slots
-  format?: 'auto' | 'fluid' | 'rectangle';
+  format?: 'auto' | 'fluid' | 'rectangle' | 'horizontal' | 'vertical';
 }
 
 export const AdSenseBanner: React.FC<AdSenseBannerProps> = ({ 

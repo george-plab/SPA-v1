@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Recipe } from '../types';
 import { X, Sparkles, ChefHat, Flame, ImagePlus, Star } from 'lucide-react';
 import { generateRecipeImage } from '../services/geminiService';
+import { AdSenseBanner } from './AdSenseBanner';
 
 interface RecipeModalProps {
   recipe: Recipe | null;
@@ -153,8 +154,16 @@ export const RecipeModal: React.FC<RecipeModalProps> = ({ recipe, onClose, onRat
                 </div>
             </div>
 
+            {/* Banner Publicidad Pequeño */}
+            <div className="mt-8 flex justify-center">
+                <div className="w-full max-w-lg">
+                    <p className="text-[10px] text-center text-gray-300 mb-1 uppercase tracking-widest">Publicidad</p>
+                    <AdSenseBanner format="horizontal" slotId="8765432109" className="bg-gray-50 min-h-[90px]" />
+                </div>
+            </div>
+
             {/* Voting Section */}
-            <div className="mt-10 border-t border-gray-200 pt-8">
+            <div className="mt-6 border-t border-gray-200 pt-8">
                 <div className="flex flex-col items-center justify-center p-6 bg-gray-50 rounded-xl">
                     <h4 className="text-lg font-bold text-gray-700 mb-2">
                         {userHasRated ? '¡Gracias por tu voto!' : '¿Qué te ha parecido esta receta?'}
